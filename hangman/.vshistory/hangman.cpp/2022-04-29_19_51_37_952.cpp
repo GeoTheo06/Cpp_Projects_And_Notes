@@ -9,7 +9,6 @@
 using namespace std;
 
 int pontoi = 0;
-int pontoiPaiktwn[100] = {};
 
 void nikh1(int vathmoiDyskolias) {
 	if (vathmoiDyskolias != 0) {
@@ -49,9 +48,8 @@ void nikh1(int vathmoiDyskolias) {
 	cout << endl << endl << endl << endl;
 }
 
-void nikh2(bool nikh, int arithmosPaiktwn, int seiraPaikth, int pontoiLekshs, int pontoiMeFilous) {
-
-
+void nikh2(bool nikh, int arithmosPaiktwn, int seiraPaikth, int pontoiLekshs) {
+	int* pontoiPaiktwn = new int[arithmosPaiktwn];
 	if (nikh) {
 		cout << "Bravo! Brhkate th leksh tou paikth " << seiraPaikth << "." << endl << "Pairnete " << pontoiLekshs << " pontous!" << endl;
 		for (int i = 0; i < arithmosPaiktwn; i++) {
@@ -174,6 +172,7 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	nikh1(0);
 }
 
+
 void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
@@ -272,21 +271,40 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	nikh1(0);
 }
 
-void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int pontoiLathosLekshs, int prospatheies) {
-	cout << "paiktes kai vathmoi (v): ";
+void meFilo() {
+	cout << "posoi paiktes paizoun; ";
+	int arithmosPaiktwn;
+	cin >> arithmosPaiktwn;
+
+	cout << "stous posous pontous thelete na teleiwnei to paixnidi; ";
+	int pontoiMeFilous;
+	cin >> pontoiMeFilous;
+
+	cout << "posous pontous thelete na pairnete gia thn kathe swsth leksh; ";
+	int pontoiSwsthsLekshs;
+	cin >> pontoiSwsthsLekshs;
+
+	cout << "posous pontous thelete na pairnete gia thn kathe lathos leksh; ";
+	int pontoiLathosLekshs;
+	cin >> pontoiLathosLekshs;
+
+	cout << "poses prospathies thelete na exei o kathe paikths; (to synithismeno einai 6)";
+	int prospatheies = 0;
+	cin >> prospatheies;
+
+	cout << "paiktes: ";
 	int* paiktes = new int[arithmosPaiktwn + 1] {};
+
 	int paiktesCounter = 0;
 	for (int i = 0; i < arithmosPaiktwn; i++) {
 		paiktesCounter += 1;
 		paiktes[i] = paiktesCounter;
 		cout << paiktes[i];
-		cout << "v: " << pontoiPaiktwn[i];
 		if (arithmosPaiktwn - 1 > i) {
 			cout << ", ";
 		}
 	}
-
-	int* PontoiTouKathePaikth = new int[arithmosPaiktwn];
+	cout << endl;
 
 	int seiraPaikth = 0;
 
@@ -389,11 +407,11 @@ void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int
 		bool isothta = (randomLeksh == lekshPouThaTypwthei);
 
 		if (isothta == true) {
-			nikh2(true, arithmosPaiktwn, seiraPaikth, pontoiSwsthsLekshs, pontoiMeFilous);
+			nikh2(true, arithmosPaiktwn, seiraPaikth, pontoiSwsthsLekshs);
 			return;
 		}
 	}
-	nikh2(false, arithmosPaiktwn, seiraPaikth, pontoiLathosLekshs, pontoiMeFilous);
+	nikh2(false, arithmosPaiktwn, seiraPaikth, pontoiLathosLekshs);
 }
 
 int main() {
@@ -422,33 +440,8 @@ int main() {
 			}
 		}
 	} else if (epilogh == 2) {
-		cout << "posoi paiktes paizoun; ";
-		int arithmosPaiktwn;
-		cin >> arithmosPaiktwn;
-
-		cout << "stous posous pontous thelete na teleiwnei to paixnidi; ";
-		int pontoiMeFilous;
-		cin >> pontoiMeFilous;
-
-		cout << "posous pontous thelete na pairnete gia thn kathe swsth leksh; ";
-		int pontoiSwsthsLekshs;
-		cin >> pontoiSwsthsLekshs;
-
-		cout << "posous pontous thelete na pairnete gia thn kathe lathos leksh; ";
-		int pontoiLathosLekshs;
-		cin >> pontoiLathosLekshs;
-
-		cout << "poses prospathies thelete na exei o kathe paikths; (to synithismeno einai 6)";
-		int prospatheies = 0;
-		cin >> prospatheies;
-
-		for (int i = 0; i < 100; i++) {
-			pontoiPaiktwn[i] = 0;
-		}
-
-		cout << endl;
 		while (true) {
-			meFilo(arithmosPaiktwn, pontoiMeFilous, pontoiSwsthsLekshs, pontoiLathosLekshs, prospatheies);
+			meFilo();
 		}
 	} else {
 		cout << "lathos epilogh!";

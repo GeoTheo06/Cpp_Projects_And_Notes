@@ -1,15 +1,13 @@
 //comment the f-ing code dumbassss
-#include <windows.h>
 #include <iostream>
 #include <fstream>
-#include <conio.h>
+#include <windows.h>
 #include <string>
 #include <ctime>
 
 using namespace std;
 
 int pontoi = 0;
-int pontoiPaiktwn[100] = {};
 
 void nikh1(int vathmoiDyskolias) {
 	if (vathmoiDyskolias != 0) {
@@ -46,34 +44,10 @@ void nikh1(int vathmoiDyskolias) {
 		}
 		cout << " apo tous 20" << endl;
 	}
-	cout << endl << endl << endl << endl;
 }
 
-void nikh2(bool nikh, int arithmosPaiktwn, int seiraPaikth, int pontoiLekshs, int pontoiMeFilous) {
+void nikh2() {
 
-
-	if (nikh) {
-		cout << "Bravo! Brhkate th leksh tou paikth " << seiraPaikth << "." << endl << "Pairnete " << pontoiLekshs << " pontous!" << endl;
-		for (int i = 0; i < arithmosPaiktwn; i++) {
-
-			if (i == seiraPaikth - 1) {
-
-			} else {
-				pontoiPaiktwn[i] += pontoiLekshs;
-			}
-		}
-
-	} else {
-		cout << "Den brhkate th leksh tou paikth " << seiraPaikth << "." << endl << "Xanete " << pontoiLekshs << " pontous!" << endl;
-		for (int i = 0; i < arithmosPaiktwn; i++) {
-
-			if (i == seiraPaikth - 1) {
-
-			} else {
-				pontoiPaiktwn[i] -= pontoiLekshs;
-			}
-		}
-	}
 }
 
 void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
@@ -174,6 +148,7 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	nikh1(0);
 }
 
+
 void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
@@ -272,128 +247,32 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	nikh1(0);
 }
 
-void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int pontoiLathosLekshs, int prospatheies) {
-	cout << "paiktes kai vathmoi (v): ";
-	int* paiktes = new int[arithmosPaiktwn + 1] {};
-	int paiktesCounter = 0;
+void meFilo() {//xreiazetai ftiakshmo kai testarisma
+	cout << "posoi paiktes paizoun; ";
+	int arithmosPaiktwn;
+	cin >> arithmosPaiktwn;
+
+	cout << "stous posous pontous thelete na teleiwnei to paixnidi; ";
+	int pontoiMeFilous;
+	cin >> pontoiMeFilous;
+
+	cout << "poses prospathries thelete na exei o kathe paikths; (to synithismeno einai 6)";
+	int prospatheies;
+	cin >> prospatheies;
+
+	cout << "paiktes: ";
+	int* paiktes = new int[arithmosPaiktwn];
 	for (int i = 0; i < arithmosPaiktwn; i++) {
-		paiktesCounter += 1;
-		paiktes[i] = paiktesCounter;
-		cout << paiktes[i];
-		cout << "v: " << pontoiPaiktwn[i];
-		if (arithmosPaiktwn - 1 > i) {
-			cout << ", ";
-		}
+		paiktes[i] += 1;
+		cout << paiktes[i] << ", ";
 	}
-
-	int* PontoiTouKathePaikth = new int[arithmosPaiktwn];
-
 	int seiraPaikth = 0;
-
-	seiraPaikth += 1;
-
-	if (seiraPaikth > arithmosPaiktwn) {
-		seiraPaikth = 1;
+	while (pontoi != pontoiMeFilous) {
+		cout << "paizei o " << seiraPaikth << " paikths. Grapse mia duskolh leksh wste na mhn mporei eukola na th vrei o antipalos sou: ";
+		string lekshXrhsth;
+		cin >> lekshXrhsth;
+	  //  https://youtu.be/pGSmbZ_Llls
 	}
-
-	cout << "Paizei o " << seiraPaikth << " paikths. Grapse mia duskolh leksh wste na mhn mporei eukola na th vrei o antipalos sou: ";
-	string lekshXrhsth = "";
-	char ch;
-
-	ch = _getch();
-	while (ch = _getch()) {
-		if (ch == 13) {
-			break;
-		} else if (ch == 8) {
-			if (lekshXrhsth.length() > 0) {
-				cout << "\b \b";
-				lekshXrhsth.erase(lekshXrhsth.length() - 1);
-			}
-		} else {
-			cout << "*";
-			lekshXrhsth += ch;
-		}
-	}
-	cout << endl;
-
-	int textLength = lekshXrhsth.length();
-	char* randomLekshChar = new char[textLength];
-	string randomLeksh = lekshXrhsth;
-	int lathosGrammataCounter = 0;
-	char* lathosGrammataXrhsth = new char[prospatheies + 1];
-
-	for (int i = 0; i < textLength; i++) {
-		randomLekshChar[i] = randomLeksh[i]; //metatrepw th random leksh se char[]
-	}
-
-	char* lekshPouThaTypwthei = new char[textLength];
-	lekshPouThaTypwthei[0] = randomLekshChar[0];
-	randomLekshChar[0] = '~';
-
-	cout << "Bres thn leksh, grafontas 1 xarakthra thn fora: " << endl;
-	for (int i = 1; i < textLength; i++) {
-		lekshPouThaTypwthei[i] = '_';
-	}
-
-	for (int i = 0; i < textLength; i++) {
-		cout << lekshPouThaTypwthei[i];
-	}
-	cout << endl;
-
-	while (prospatheies != 0) {
-		cout << "Epilekste xarakthra: ";
-		string keimenoXrhsth;
-		cin >> keimenoXrhsth;
-		char grammaXrhsth = keimenoXrhsth[0];
-
-		bool grammaCheck = false;
-		for (int i = 0; i < textLength; i++) {
-			if (grammaXrhsth == randomLekshChar[i]) {
-				lekshPouThaTypwthei[i] = grammaXrhsth;
-				grammaCheck = true;
-			}
-		}
-		bool checkDoubleWrongInput = false;
-		for (int i = 0; i < lathosGrammataCounter; i++) {
-			if (grammaXrhsth == lathosGrammataXrhsth[i]) {
-				checkDoubleWrongInput = true;
-			}
-		}
-
-		if (grammaCheck) {
-			cout << "Swsto!" << endl;
-		} else if (checkDoubleWrongInput == true) {
-			cout << "Exeis ksanaprospathisei auto to gramma kai einai lathos, dokimase kapoio allo" << endl;
-		} else {
-			cout << "Lathos!" << endl;
-			lathosGrammataXrhsth[lathosGrammataCounter] = grammaXrhsth;
-			lathosGrammataCounter++;
-			prospatheies--;
-		}
-		system("timeout 2 > nul");
-
-		cout << endl;
-		for (int i = 0; i < textLength; i++) {
-			cout << lekshPouThaTypwthei[i];
-		}
-		cout << endl;
-		cout << "lathos grammata: ";
-		for (int i = 0; i < lathosGrammataCounter; i++) {
-			cout << lathosGrammataXrhsth[i];
-			if (lathosGrammataCounter - 2 >= i) {
-				cout << ", ";
-			}
-		}
-		cout << endl;
-
-		bool isothta = (randomLeksh == lekshPouThaTypwthei);
-
-		if (isothta == true) {
-			nikh2(true, arithmosPaiktwn, seiraPaikth, pontoiSwsthsLekshs, pontoiMeFilous);
-			return;
-		}
-	}
-	nikh2(false, arithmosPaiktwn, seiraPaikth, pontoiLathosLekshs, pontoiMeFilous);
 }
 
 int main() {
@@ -422,34 +301,7 @@ int main() {
 			}
 		}
 	} else if (epilogh == 2) {
-		cout << "posoi paiktes paizoun; ";
-		int arithmosPaiktwn;
-		cin >> arithmosPaiktwn;
-
-		cout << "stous posous pontous thelete na teleiwnei to paixnidi; ";
-		int pontoiMeFilous;
-		cin >> pontoiMeFilous;
-
-		cout << "posous pontous thelete na pairnete gia thn kathe swsth leksh; ";
-		int pontoiSwsthsLekshs;
-		cin >> pontoiSwsthsLekshs;
-
-		cout << "posous pontous thelete na pairnete gia thn kathe lathos leksh; ";
-		int pontoiLathosLekshs;
-		cin >> pontoiLathosLekshs;
-
-		cout << "poses prospathies thelete na exei o kathe paikths; (to synithismeno einai 6)";
-		int prospatheies = 0;
-		cin >> prospatheies;
-
-		for (int i = 0; i < 100; i++) {
-			pontoiPaiktwn[i] = 0;
-		}
-
-		cout << endl;
-		while (true) {
-			meFilo(arithmosPaiktwn, pontoiMeFilous, pontoiSwsthsLekshs, pontoiLathosLekshs, prospatheies);
-		}
+		meFilo();
 	} else {
 		cout << "lathos epilogh!";
 	}
