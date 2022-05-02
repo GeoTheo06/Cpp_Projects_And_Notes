@@ -87,7 +87,7 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("words.mhnAnoikseis");
+	ifstream periexomenoArxeiou("words.txt");
 
 	int randomArithmos = (rand() % 300);
 	int lathosGrammataCounter = 0;
@@ -205,7 +205,7 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("difficult_words.mhnAnoikseis");
+	ifstream periexomenoArxeiou("difficult_words.txt");
 	int randomArithmos = (rand() % 253);
 	int lathosGrammataCounter = 0;
 
@@ -295,7 +295,7 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 			}
 		}
 
-		if (swstaGrammataCounter == textLength) {
+		if (randomLekshChar2 == textLength) {
 			nikh1(pontoiPouKerdise);
 			delete[] randomLekshChar;
 			delete[] lekshPouThaTypwthei;

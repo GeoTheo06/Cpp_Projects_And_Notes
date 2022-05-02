@@ -87,7 +87,7 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("words.mhnAnoikseis");
+	ifstream periexomenoArxeiou("words.txt");
 
 	int randomArithmos = (rand() % 300);
 	int lathosGrammataCounter = 0;
@@ -99,16 +99,11 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	int textLength = randomLeksh.length(); //arithmos grammatwn ths random lekshs
 
 	char* randomLekshChar = new char[textLength];
-	char* randomLekshChar2 = new char[textLength];
 	char lathosGrammataXrhsth[24] {};
 
 	for (int i = 0; i < textLength; i++) {
-		randomLeksh[i] -= 1;
-	}
-
-	for (int i = 0; i < textLength; i++) {
 		randomLekshChar[i] = randomLeksh[i]; //metatrepw th random leksh se char[]
-		randomLekshChar2[i] = randomLeksh[i];
+		randomLekshChar[i] -= 1;
 	}
 
 	char* lekshPouThaTypwthei = new char[textLength];
@@ -172,18 +167,19 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 		}
 		cout << endl;
 
-		int swstaGrammataCounter = 0;
+		string testing;
 		for (int i = 0; i < textLength; i++) {
-			if (randomLekshChar2[i] == lekshPouThaTypwthei[i]) {
-				swstaGrammataCounter++;
-			}
+			testing[i] = lekshPouThaTypwthei[i];
+		}
+		string testing2;
+		for (int i = 0; i < textLength; i++) {
+			testing2[i] = lekshPouThaTypwthei[i];
 		}
 
-		if (swstaGrammataCounter == textLength) {
+		if (testing == testing2) {
 			nikh1(pontoiPouKerdise);
 			delete[] randomLekshChar;
 			delete[] lekshPouThaTypwthei;
-			delete[] randomLekshChar2;
 			return;
 		}
 
@@ -197,7 +193,6 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	}
 	delete[] randomLekshChar;
 	delete[] lekshPouThaTypwthei;
-	delete[] randomLekshChar2;
 	nikh1(0);
 }
 
@@ -205,7 +200,7 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("difficult_words.mhnAnoikseis");
+	ifstream periexomenoArxeiou("difficult_words.txt");
 	int randomArithmos = (rand() % 253);
 	int lathosGrammataCounter = 0;
 
@@ -216,16 +211,11 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	int textLength = randomLeksh.length(); //arithmos grammatwn ths random lekshs
 
 	char* randomLekshChar = new char[textLength];
-	char* randomLekshChar2 = new char[textLength];
 	char lathosGrammataXrhsth[24] {};
 
 	for (int i = 0; i < textLength; i++) {
-		randomLeksh[i] -= 1; //apokryptografw th leksh
-	}
-
-	for (int i = 0; i < textLength; i++) {
 		randomLekshChar[i] = randomLeksh[i]; //metatrepw th random leksh se char[]
-		randomLekshChar2[i] = randomLeksh[i];
+		randomLekshChar[i] -= 1; //apokryptografw th leksh
 	}
 
 	char* lekshPouThaTypwthei = new char[textLength];
@@ -288,18 +278,20 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 		}
 		cout << endl;
 
-		int swstaGrammataCounter = 0;
+		string testing = " ";
 		for (int i = 0; i < textLength; i++) {
-			if (randomLekshChar2[i] == lekshPouThaTypwthei[i]) {
-				swstaGrammataCounter++;
-			}
+			testing[i] = lekshPouThaTypwthei[i];
+		}
+		string testing2 = " ";
+		for (int i = 0; i < textLength; i++) {
+			testing2[i] = lekshPouThaTypwthei[i];
 		}
 
-		if (swstaGrammataCounter == textLength) {
+		if (testing == testing2) {
+			cout << testing << " " << testing2 << " " << textLength;
 			nikh1(pontoiPouKerdise);
 			delete[] randomLekshChar;
 			delete[] lekshPouThaTypwthei;
-			delete[] randomLekshChar2;
 			return;
 		}
 
@@ -313,7 +305,6 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	}
 	delete[] randomLekshChar;
 	delete[] lekshPouThaTypwthei;
-	delete[] randomLekshChar2;
 	nikh1(0);
 }
 

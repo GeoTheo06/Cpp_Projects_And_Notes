@@ -1,4 +1,4 @@
-//comment the f-ing code
+//comment the f-ing code dumbassss
 #include <windows.h>
 #include <iostream>
 #include <fstream>
@@ -87,8 +87,7 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("words.mhnAnoikseis");
-
+	ifstream periexomenoArxeiou("words.txt");
 	int randomArithmos = (rand() % 300);
 	int lathosGrammataCounter = 0;
 
@@ -99,16 +98,10 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	int textLength = randomLeksh.length(); //arithmos grammatwn ths random lekshs
 
 	char* randomLekshChar = new char[textLength];
-	char* randomLekshChar2 = new char[textLength];
 	char lathosGrammataXrhsth[24] {};
 
 	for (int i = 0; i < textLength; i++) {
-		randomLeksh[i] -= 1;
-	}
-
-	for (int i = 0; i < textLength; i++) {
 		randomLekshChar[i] = randomLeksh[i]; //metatrepw th random leksh se char[]
-		randomLekshChar2[i] = randomLeksh[i];
 	}
 
 	char* lekshPouThaTypwthei = new char[textLength];
@@ -172,18 +165,12 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 		}
 		cout << endl;
 
-		int swstaGrammataCounter = 0;
-		for (int i = 0; i < textLength; i++) {
-			if (randomLekshChar2[i] == lekshPouThaTypwthei[i]) {
-				swstaGrammataCounter++;
-			}
-		}
+		bool isothta = (randomLeksh == lekshPouThaTypwthei);
 
-		if (swstaGrammataCounter == textLength) {
+		if (isothta == true) {
 			nikh1(pontoiPouKerdise);
 			delete[] randomLekshChar;
 			delete[] lekshPouThaTypwthei;
-			delete[] randomLekshChar2;
 			return;
 		}
 
@@ -197,7 +184,6 @@ void monos1(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	}
 	delete[] randomLekshChar;
 	delete[] lekshPouThaTypwthei;
-	delete[] randomLekshChar2;
 	nikh1(0);
 }
 
@@ -205,27 +191,20 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	srand(time(0));
 	string randomLeksh;
 	int prospatheies = arithmosProspatheiwn;
-	ifstream periexomenoArxeiou("difficult_words.mhnAnoikseis");
+	ifstream periexomenoArxeiou("difficult_words.txt");
 	int randomArithmos = (rand() % 253);
 	int lathosGrammataCounter = 0;
 
 	for (int i = 0; i <= randomArithmos; i++) {
 		getline(periexomenoArxeiou, randomLeksh); //pairnw thn random leksh apo to arxeio me tis 253 lekseis
 	}
-
 	int textLength = randomLeksh.length(); //arithmos grammatwn ths random lekshs
 
 	char* randomLekshChar = new char[textLength];
-	char* randomLekshChar2 = new char[textLength];
 	char lathosGrammataXrhsth[24] {};
 
 	for (int i = 0; i < textLength; i++) {
-		randomLeksh[i] -= 1; //apokryptografw th leksh
-	}
-
-	for (int i = 0; i < textLength; i++) {
 		randomLekshChar[i] = randomLeksh[i]; //metatrepw th random leksh se char[]
-		randomLekshChar2[i] = randomLeksh[i];
 	}
 
 	char* lekshPouThaTypwthei = new char[textLength];
@@ -288,18 +267,12 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 		}
 		cout << endl;
 
-		int swstaGrammataCounter = 0;
-		for (int i = 0; i < textLength; i++) {
-			if (randomLekshChar2[i] == lekshPouThaTypwthei[i]) {
-				swstaGrammataCounter++;
-			}
-		}
+		bool isothta = (randomLeksh == lekshPouThaTypwthei);
 
-		if (swstaGrammataCounter == textLength) {
+		if (isothta == true) {
 			nikh1(pontoiPouKerdise);
 			delete[] randomLekshChar;
 			delete[] lekshPouThaTypwthei;
-			delete[] randomLekshChar2;
 			return;
 		}
 
@@ -313,11 +286,10 @@ void monos2(int arithmosProspatheiwn, int pontoiPouKerdise) {
 	}
 	delete[] randomLekshChar;
 	delete[] lekshPouThaTypwthei;
-	delete[] randomLekshChar2;
 	nikh1(0);
 }
 
-void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int pontoiLathosLekshs, int prospatheies) {
+void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int pontoiLathosLekshs, int prospatheies) { //kane na leei ston plhthintiko h ston eniko opote xreiazetai kai ftiakse to arxeio //kane to content twn txt arxeiwn kryptografhmena me +5 (na mhn einai periploko)
 	cout << "paiktes (p) kai vathmoi (v): " << endl;
 	int* paiktes = new int[arithmosPaiktwn + 1] {};
 	int paiktesCounter = 0;
@@ -382,12 +354,7 @@ void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int
 	lekshPouThaTypwthei[0] = randomLekshChar[0];
 	randomLekshChar[0] = '~';
 
-	if (arithmosPaiktwn == 2) {
-		cout << "Bres th leksh, grafontas 1 xarakthra thn fora: " << endl;
-	} else {
-		cout << "Breite th leksh, grafontas 1 xarakthra thn fora: " << endl;
-	}
-
+	cout << "Breite thn leksh, grafontas 1 xarakthra thn fora: " << endl;
 	for (int i = 1; i < textLength; i++) {
 		lekshPouThaTypwthei[i] = '_';
 	}
@@ -398,12 +365,7 @@ void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int
 	cout << endl;
 
 	while (prospatheies != 0) {
-		if (arithmosPaiktwn == 2) {
-			cout << "Epelekse xarakthra: ";
-		} else {
-			cout << "Epilekste xarakthra: ";
-		}
-
+		cout << "Epilekste xarakthra: ";
 		string keimenoXrhsth;
 		cin >> keimenoXrhsth;
 		char grammaXrhsth = keimenoXrhsth[0];
@@ -425,12 +387,7 @@ void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int
 		if (grammaCheck) {
 			cout << "Swsto!" << endl;
 		} else if (checkDoubleWrongInput == true) {
-			if (arithmosPaiktwn == 2) {
-				cout << "Exeis ksanaprospathisei auto to gramma kai einai lathos, dokimase kapoio allo" << endl;
-			} else {
-				cout << "Exete ksanaprospathisei auto to gramma kai einai lathos, dokimaste kapoio allo" << endl;
-			}
-
+			cout << "Exeis ksanaprospathisei auto to gramma kai einai lathos, dokimase kapoio allo" << endl;
 		} else {
 			cout << "Lathos!" << endl;
 			lathosGrammataXrhsth[lathosGrammataCounter] = grammaXrhsth;
@@ -465,25 +422,11 @@ void meFilo(int arithmosPaiktwn, int pontoiMeFilous, int pontoiSwsthsLekshs, int
 		}
 
 		if (prospatheies == 1) {
-			if (arithmosPaiktwn == 2) {
-				cout << "sou apomenei " << prospatheies << " prospatheia" << endl;
-			} else {
-				cout << "sas apomenei " << prospatheies << " prospatheia" << endl;
-			}
-
+			cout << "sou apomenei " << prospatheies << " prospatheia" << endl;
 		} else if (prospatheies == 0) {
-			if (arithmosPaiktwn == 2) {
-				cout << "Exases! H leksh htan \"" << randomLeksh << "\"" << endl;
-			} else {
-				cout << "Xasate! H leksh htan \"" << randomLeksh << "\"" << endl;
-			}
-
+			cout << "Exases! H leksh htan \"" << randomLeksh << "\"" << endl;
 		} else {
-			if (arithmosPaiktwn == 2) {
-				cout << "sou apomenoun " << prospatheies << " prospatheies" << endl;
-			} else {
-				cout << "sas apomenoun " << prospatheies << " prospatheies" << endl;
-			}
+			cout << "sou apomenoun " << prospatheies << " prospatheies" << endl;
 		}
 	}
 	delete[] paiktes;

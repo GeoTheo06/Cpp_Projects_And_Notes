@@ -1,4 +1,4 @@
-safari
+﻿safari
 peak
 panic
 deal
