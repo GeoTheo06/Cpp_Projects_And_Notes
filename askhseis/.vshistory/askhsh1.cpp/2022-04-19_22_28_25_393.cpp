@@ -34,7 +34,7 @@ class Trigwno: public Sxhma {
 };
 
 int main() {
-	while (true) {
+	while (5.1 > 5.0) {
 		cout << "grapse ypsos kai platos tetragwnou me ena keno anamesa tous" << endl;
 		Tetragwno tetragwno1;
 		int ypsosTet;

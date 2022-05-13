@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "calc", "calc\calc.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "b fash", "b fash\b fash.vcxproj", "{2286F50D-F984-4AC4-8B17-807A66659BE3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arxeia (fstream)", "arxeia\arxeia.vcxproj", "{355BBF0A-6D80-4CB8-BEC5-905E76B81C1B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arxeia", "arxeia\arxeia.vcxproj", "{355BBF0A-6D80-4CB8-BEC5-905E76B81C1B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "askhsh1", "askhseis\askhseis.vcxproj", "{13AEC29E-41C0-4595-A704-8D29B5326154}"
 EndProject
@@ -25,7 +25,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "passGen", "passGen\passGen.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polumorfismos", "polumorfismos\polumorfismos.vcxproj", "{B8F4F4C3-4503-4307-A374-02ADFF00CF28}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetsSetsAskhsh", "set get\set get.vcxproj", "{0F2557E3-663E-4EB1-AB43-426899E023BA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "setsGetsAskhsh", "set get\set get.vcxproj", "{0F2557E3-663E-4EB1-AB43-426899E023BA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "askhshConstructors", "askhshConstructors\askhshConstructors.vcxproj", "{5E61E054-D811-4835-A25B-FDDB649A902D}"
 EndProject
@@ -42,12 +42,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "200StrofhMeLeneMama", "200StrofhMeLeneMama\200StrofhMeLeneMama.vcxproj", "{4A7DB1AD-29C6-46E9-9995-4EB16E82C683}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hangman", "hangman\hangman.vcxproj", "{BD660910-B3A8-495F-90D2-7CCCB3DED9A8}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Windows Commands", "Windows Commands\Windows Commands.vcxproj", "{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testing", "testing\testing.vcxproj", "{A2296872-96D7-4197-AEF9-2AE7C0407F36}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArxeiaAskhsh", "ArxeiaAskhsh\ArxeiaAskhsh.vcxproj", "{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -217,30 +211,6 @@ Global
 		{BD660910-B3A8-495F-90D2-7CCCB3DED9A8}.Release|x64.Build.0 = Release|x64
 		{BD660910-B3A8-495F-90D2-7CCCB3DED9A8}.Release|x86.ActiveCfg = Release|Win32
 		{BD660910-B3A8-495F-90D2-7CCCB3DED9A8}.Release|x86.Build.0 = Release|Win32
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Debug|x64.ActiveCfg = Debug|x64
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Debug|x64.Build.0 = Debug|x64
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Debug|x86.ActiveCfg = Debug|Win32
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Debug|x86.Build.0 = Debug|Win32
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Release|x64.ActiveCfg = Release|x64
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Release|x64.Build.0 = Release|x64
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Release|x86.ActiveCfg = Release|Win32
-		{98DC49B2-EB18-4F0A-811D-DA9AEF7C4C31}.Release|x86.Build.0 = Release|Win32
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Debug|x64.ActiveCfg = Debug|x64
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Debug|x64.Build.0 = Debug|x64
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Debug|x86.ActiveCfg = Debug|Win32
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Debug|x86.Build.0 = Debug|Win32
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Release|x64.ActiveCfg = Release|x64
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Release|x64.Build.0 = Release|x64
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Release|x86.ActiveCfg = Release|Win32
-		{A2296872-96D7-4197-AEF9-2AE7C0407F36}.Release|x86.Build.0 = Release|Win32
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Debug|x64.ActiveCfg = Debug|x64
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Debug|x64.Build.0 = Debug|x64
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Debug|x86.ActiveCfg = Debug|Win32
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Debug|x86.Build.0 = Debug|Win32
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Release|x64.ActiveCfg = Release|x64
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Release|x64.Build.0 = Release|x64
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Release|x86.ActiveCfg = Release|Win32
-		{E2D0C77F-1AEA-49FD-9877-4D4CE559F532}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,8 +18,5 @@
     <ClCompile Include="arxeia.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="arxeiaAskhseis.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

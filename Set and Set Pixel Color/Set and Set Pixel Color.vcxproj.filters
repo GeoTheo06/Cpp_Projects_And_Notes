@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GetsSetsAskhsh.cpp">
+    <ClCompile Include="Get and Set Pixel Color.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

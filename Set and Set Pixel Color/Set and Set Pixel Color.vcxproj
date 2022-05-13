@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0f2557e3-663e-4eb1-ab43-426899e023ba}</ProjectGuid>
-    <RootNamespace>set_get</RootNamespace>
+    <ProjectGuid>{a2eaa82c-55be-4809-8a5b-c4dde427d904}</ProjectGuid>
+    <RootNamespace>Set_and_Set_Pixel_Color</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>GetsSetsAskhsh</ProjectName>
+    <ProjectName>Get and Set Pixel Color</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GetsSetsAskhsh.cpp" />
+    <ClCompile Include="Get and Set Pixel Color.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,20 +4,18 @@
 using namespace std;
 
 int main() {
-    //dhmiourgia arxeiou
-    ofstream toArxeioMou("mathima");
+	//eggrafh keimenou sto arxeio
+	fstream arxeio;
+	arxeio.open("arxeio.txt", fstream::app);
+	arxeio << "\n This is content in a file!";
 
-    //eggrafh keimenou se arxeio
-    toArxeioMou << "eggrafh keimenou se ekswteriko arxeio" << endl;
+	//anakthsh keimenou apo arxeio ston kwdika.
+	string periexomeno;
+	ifstream periexomenoArxeiou("arxeio.txt");
 
-    //anakthsh keimenou apo arxeio ston kwdika.
-    string periexomeno;
-    ifstream periexomenoArxeiou("mathima");
+	while (getline(periexomenoArxeiou, periexomeno)) { //note: to getline pairnei ana grammh to keimeno
+		cout << periexomeno << endl;
+	}
 
-    while (getline(periexomenoArxeiou, periexomeno)) { //note: to getline pairnei ana grammh to keimeno
-        cout << periexomeno << endl;
-    }
-
-    //kleisimo arxeiwn
-    toArxeioMou.close();
+	arxeio.close(); //kleinw to arxeio giati alliws meinei anoixto sth mnhmh
 }

@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0f2557e3-663e-4eb1-ab43-426899e023ba}</ProjectGuid>
-    <RootNamespace>set_get</RootNamespace>
+    <ProjectGuid>{e2d0c77f-1aea-49fd-9877-4d4ce559f532}</ProjectGuid>
+    <RootNamespace>ArxeiaAskhsh</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>GetsSetsAskhsh</ProjectName>
+    <ProjectName>-</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GetsSetsAskhsh.cpp" />
+    <ClCompile Include="-.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

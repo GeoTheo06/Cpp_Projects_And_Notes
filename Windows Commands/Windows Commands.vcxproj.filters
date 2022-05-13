@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GetsSetsAskhsh.cpp">
+    <ClCompile Include="Windows Commands.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
