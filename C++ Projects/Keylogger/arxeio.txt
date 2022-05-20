@@ -1,0 +1,1 @@
+ "LCLICK"  "LCLICK"  "ALT"  "LCLICK"  "LCLICK"  "CTRL + C"  "ALT"  "ENTER"  "CTRL + V"  "LCLICK" 
