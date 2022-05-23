@@ -5,7 +5,10 @@
 #include <string>
 using namespace std;
 
+
+
 const int rounds = 10;
+int remainingPoints = points;
 
 float maxShield = 0;
 float maxHealth = 0;
@@ -155,7 +158,7 @@ void playerAttack() { //if I name this just "attack" it will interfere with the 
 				wrongInput = false;
 			}
 		} else {
-			cout << "Wrong input... Try again." << endl << endl;
+			cout << "Wrong input... Try again." << endl;
 			wrongInput = true;
 			continue;
 		}
@@ -249,14 +252,11 @@ void enemyAttack() {
 }
 
 int main() {
-	srand(time(0));//true random declaration
-
-	ifstream textFile("text.txt"); //declaring which file textFile will open
+	//true random declaration
+	srand(time(0));
+	ifstream textFile("text.txt");
 
 	bool wrongDifficultyInput = true;
-	int points = 0;
-	int enemyPoints = 0;
-	int remainingPoints = 0;
 
 	cout << "Welcome to the Text Based Game!" << endl;
 	do {
@@ -270,71 +270,8 @@ int main() {
 
 		int choice = 0;
 		cin >> choice;
-
 		if (choice == 1) {
 			points = 600;
-			enemyPoints = 200;
-			remainingPoints = points;
-
-			cout << "You have " << points << " Points to spend on Health, Mana, Shield and Attack. ";
-			Sleep(2000);
-			cout << "Choose wisely : " << endl << endl;
-
-			while (geo.health + geo.mana + geo.attack + geo.shield != points) {
-				remainingPoints = points;
-
-				cout << "1. Health: ";
-				cin >> geo.health;
-				if (geo.health > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0; //restarting variables so that there is no problem with the while loop. Pretty sure I could do this once on the start of the loop, though I dont care about speed in this project.
-					continue; //Skips any following code and restarts the loop
-				} else {
-					remainingPoints -= geo.health;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "2. Mana: ";
-				cin >> geo.mana;
-				if (geo.mana > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.mana;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "3. Attack: ";
-				cin >> geo.attack;
-				if (geo.attack > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.attack;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "There are " << remainingPoints << " Points left which will be used for your shield." << endl << endl;
-				geo.shield = remainingPoints;
-				remainingPoints = 0;
-			}
-			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
-			wrongDifficultyInput = false;
-		} else if (choice == 2) {
-			points = 500;
-			enemyPoints = 300;
-			remainingPoints = points;
 
 			cout << "You have " << points << " Points to spend on Health, Mana, Shield and Attack. ";
 			Sleep(2000);
@@ -364,7 +301,7 @@ int main() {
 					geo.shield = 0;
 					geo.attack = 0;
 					geo.health = 0;
-					geo.mana = 0;
+					geo.mana = 0; //restarting variables so that there is no problem with the while loop
 					continue;
 				} else {
 					remainingPoints -= geo.mana;
@@ -374,71 +311,11 @@ int main() {
 				cout << "3. Attack: ";
 				cin >> geo.attack;
 				if (geo.attack > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.attack;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "There are " << remainingPoints << " Points left which will be used for your shield." << endl << endl;
-				geo.shield = remainingPoints;
-				remainingPoints = 0;
-			}
-			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
-			wrongDifficultyInput = false;
-		} else if (choice == 3) {
-			points = 400;
-			enemyPoints = 400;
-			remainingPoints = points;
-
-			cout << "You have " << points << " Points to spend on Health, Mana, Shield and Attack. ";
-			Sleep(2000);
-			cout << "Choose wisely : " << endl << endl;
-
-			while (geo.health + geo.mana + geo.attack + geo.shield != points) {
-				remainingPoints = points;
-
-				cout << "1. Health: ";
-				cin >> geo.health;
-				if (geo.health > remainingPoints) {
 					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
 					geo.shield = 0;
 					geo.attack = 0;
 					geo.health = 0;
 					geo.mana = 0; //restarting variables so that there is no problem with the while loop
-					continue; //Skips any following code and restarts the loop
-				} else {
-					remainingPoints -= geo.health;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "2. Mana: ";
-				cin >> geo.mana;
-				if (geo.mana > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.mana;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "3. Attack: ";
-				cin >> geo.attack;
-				if (geo.attack > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
 					continue;
 				} else {
 					remainingPoints -= geo.attack;
@@ -451,69 +328,8 @@ int main() {
 			}
 			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
 			wrongDifficultyInput = false;
-
-		} else if (choice == 4) {
-			points = rand() % 400 + 200;//from 200 to 600 (It is 600 and not a mistake). It is kinda tricky so if you forgot how to use rand min and max: https://www.cplusplus.com/reference/cstdlib/rand/
-			enemyPoints = rand() % 400 + 200;
-			remainingPoints = points;
-
-			cout << "You have " << points << " Points to spend on Health, Mana, Shield and Attack. ";
-			Sleep(2000);
-			cout << "Choose wisely : " << endl << endl;
-
-			while (geo.health + geo.mana + geo.attack + geo.shield != points) {
-				remainingPoints = points;
-
-				cout << "1. Health: ";
-				cin >> geo.health;
-				if (geo.health > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0; //restarting variables so that there is no problem with the while loop
-					continue; //Skips any following code and restarts the loop
-				} else {
-					remainingPoints -= geo.health;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "2. Mana: ";
-				cin >> geo.mana;
-				if (geo.mana > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.mana;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "3. Attack: ";
-				cin >> geo.attack;
-				if (geo.attack > remainingPoints) {
-					cout << "You can't use more than " << remainingPoints << " points" << endl << "Try Again..." << endl << endl;
-					geo.shield = 0;
-					geo.attack = 0;
-					geo.health = 0;
-					geo.mana = 0;
-					continue;
-				} else {
-					remainingPoints -= geo.attack;
-					cout << "You have " << remainingPoints << " points left" << endl << endl;
-				}
-
-				cout << "There are " << remainingPoints << " Points left which will be used for your shield." << endl << endl;
-				geo.shield = remainingPoints;
-				remainingPoints = 0;
-			}
-			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
-			wrongDifficultyInput = false;
-		} else { //if player chooses a number beyond 4 (in the difficulty mode selection)
-			cout << "Wrong input. Try again..." << endl << endl;
+		} else {
+			cout << "Wrong input. Try again..." << endl;
 			wrongDifficultyInput = true;
 		}
 	} while (wrongDifficultyInput);
@@ -522,9 +338,7 @@ int main() {
 	maxHealth = geo.health;
 	maxMana = geo.mana;
 
-	int pointsNeededToGetTothreeQuarters = 0;
-
-	for (int i = 1; i < rounds; i++) { //Game Loop: it runs for every round
+	for (int i = 1; i < rounds; i++) { //it runs for every round (Game Loop)
 		if (geo.mana >= 5) { // It could be 0 but if the mana is 4, 3, 2 or 1 , the game would continue, though the player would not be able to execute moves as the minimum mana for pepper spray is 5
 
 			//Getting a random name from the names list
@@ -536,8 +350,7 @@ int main() {
 			textFile.close();
 
 			//initialising enemy's variables. (It has to be different every round)
-			pointsNeededToGetTothreeQuarters = ((enemyPoints * 3) / 4) - (enemyPoints / 4);
-			int enemyPointsMoirasmos = (rand() % (pointsNeededToGetTothreeQuarters) +(enemyPoints / 4)); // the lowest it can go is 1/4 of the total points and the highest it can go is 3/4 of the total points. It is kinda tricky so if you forget how to use rand: https://www.cplusplus.com/reference/cstdlib/rand/
+			int enemyPointsMoirasmos = (rand() % (enemyPoints - enemyPoints / 4) + (enemyPoints / 4)); // the lowest it can go is 1/4 of the total points and the highest it can go is 3/4 of the total points
 			enemy.health = enemyPointsMoirasmos;
 			enemy.attack = enemyPoints - enemyPointsMoirasmos;
 			enemyPoints += 50; //every time a game loop starts, the total points that an enenmy will have for his abilities will be +50 so that it's harder each round
@@ -595,7 +408,7 @@ int main() {
 						useShield();
 						wrongMoveInput = false;
 					} else {
-						cout << "Wrong input. Try again..." << endl << endl;
+						cout << "Wrong input. Try again..." << endl;
 						wrongMoveInput = true;
 						continue;
 					}

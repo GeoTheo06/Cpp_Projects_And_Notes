@@ -155,7 +155,7 @@ void playerAttack() { //if I name this just "attack" it will interfere with the 
 				wrongInput = false;
 			}
 		} else {
-			cout << "Wrong input... Try again." << endl << endl;
+			cout << "Wrong input... Try again." << endl;
 			wrongInput = true;
 			continue;
 		}
@@ -453,8 +453,8 @@ int main() {
 			wrongDifficultyInput = false;
 
 		} else if (choice == 4) {
-			points = rand() % 400 + 200;//from 200 to 600 (It is 600 and not a mistake). It is kinda tricky so if you forgot how to use rand min and max: https://www.cplusplus.com/reference/cstdlib/rand/
-			enemyPoints = rand() % 400 + 200;
+			points = rand() % 200;
+			enemyPoints = 200;
 			remainingPoints = points;
 
 			cout << "You have " << points << " Points to spend on Health, Mana, Shield and Attack. ";
@@ -513,7 +513,7 @@ int main() {
 			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
 			wrongDifficultyInput = false;
 		} else { //if player chooses a number beyond 4 (in the difficulty mode selection)
-			cout << "Wrong input. Try again..." << endl << endl;
+			cout << "Wrong input. Try again..." << endl;
 			wrongDifficultyInput = true;
 		}
 	} while (wrongDifficultyInput);
@@ -521,8 +521,6 @@ int main() {
 	maxShield = geo.shield;
 	maxHealth = geo.health;
 	maxMana = geo.mana;
-
-	int pointsNeededToGetTothreeQuarters = 0;
 
 	for (int i = 1; i < rounds; i++) { //Game Loop: it runs for every round
 		if (geo.mana >= 5) { // It could be 0 but if the mana is 4, 3, 2 or 1 , the game would continue, though the player would not be able to execute moves as the minimum mana for pepper spray is 5
@@ -536,8 +534,7 @@ int main() {
 			textFile.close();
 
 			//initialising enemy's variables. (It has to be different every round)
-			pointsNeededToGetTothreeQuarters = ((enemyPoints * 3) / 4) - (enemyPoints / 4);
-			int enemyPointsMoirasmos = (rand() % (pointsNeededToGetTothreeQuarters) +(enemyPoints / 4)); // the lowest it can go is 1/4 of the total points and the highest it can go is 3/4 of the total points. It is kinda tricky so if you forget how to use rand: https://www.cplusplus.com/reference/cstdlib/rand/
+			int enemyPointsMoirasmos = (rand() % (enemyPoints - enemyPoints / 4) + (enemyPoints / 4)); // the lowest it can go is 1/4 of the total points and the highest it can go is 3/4 of the total points
 			enemy.health = enemyPointsMoirasmos;
 			enemy.attack = enemyPoints - enemyPointsMoirasmos;
 			enemyPoints += 50; //every time a game loop starts, the total points that an enenmy will have for his abilities will be +50 so that it's harder each round
@@ -595,7 +592,7 @@ int main() {
 						useShield();
 						wrongMoveInput = false;
 					} else {
-						cout << "Wrong input. Try again..." << endl << endl;
+						cout << "Wrong input. Try again..." << endl;
 						wrongMoveInput = true;
 						continue;
 					}

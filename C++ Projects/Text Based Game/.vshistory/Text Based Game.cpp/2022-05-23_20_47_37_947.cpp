@@ -155,7 +155,7 @@ void playerAttack() { //if I name this just "attack" it will interfere with the 
 				wrongInput = false;
 			}
 		} else {
-			cout << "Wrong input... Try again." << endl << endl;
+			cout << "Wrong input... Try again." << endl;
 			wrongInput = true;
 			continue;
 		}
@@ -513,7 +513,7 @@ int main() {
 			cout << "Your choices:" << endl << "1. Health: " << geo.health << endl << "2. Mana: " << geo.mana << endl << "3. Attack: " << geo.attack << endl << "4. shield: " << geo.shield << endl << endl;
 			wrongDifficultyInput = false;
 		} else { //if player chooses a number beyond 4 (in the difficulty mode selection)
-			cout << "Wrong input. Try again..." << endl << endl;
+			cout << "Wrong input. Try again..." << endl;
 			wrongDifficultyInput = true;
 		}
 	} while (wrongDifficultyInput);
@@ -595,7 +595,7 @@ int main() {
 						useShield();
 						wrongMoveInput = false;
 					} else {
-						cout << "Wrong input. Try again..." << endl << endl;
+						cout << "Wrong input. Try again..." << endl;
 						wrongMoveInput = true;
 						continue;
 					}
