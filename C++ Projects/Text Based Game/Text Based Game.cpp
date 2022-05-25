@@ -251,7 +251,7 @@ void enemyAttack() {
 int main() {
 	srand(time(0));//true random declaration
 
-	ifstream textFile("text.txt"); //declaring which file textFile will open
+	ifstream textFile("names.txt"); //declaring which file textFile will open
 
 	bool wrongDifficultyInput = true;
 	int points = 0;
