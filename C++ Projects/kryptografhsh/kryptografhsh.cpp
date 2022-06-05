@@ -7,7 +7,7 @@ void kryptografhsh() {
 	srand(time(0));
 
 	string text;
-	cout << "Grapse to keimeno pou thes na kryptografhthei: ";
+	cout << "Write the text You want to be encrypted: ";
 	cin.ignore();
 	getline(cin, text);
 
@@ -31,7 +31,7 @@ void kryptografhsh() {
 
 	char* privateKey = new char[lexeis];
 
-	cout << "epelekse xarakthra kwdikopoihshs: "; //xarakthras o opoios tha kwdikopoihthei (prepei na perilamvanetai sto apotelesma)
+	cout << "select character encode: "; //xarakthras o opoios tha kwdikopoihthei (prepei na perilamvanetai sto apotelesma)
 	char privateKeyCharacter;
 	cin >> privateKeyCharacter;
 
@@ -86,7 +86,7 @@ void kryptografhsh() {
 
 void apokryptografhsh() {
 	string kryptografhmenoKeimeno;
-	cout << "kane copy - paste to keimeno pou sou dothike: " << endl;
+	cout << "paste the encrypted text that was given to you: " << endl;
 	cin.ignore();
 	getline(cin, kryptografhmenoKeimeno);
 
@@ -162,9 +162,9 @@ void apokryptografhsh() {
 int main() {
 
 	while (true) {
-		cout << "1. kryptografhsh" << endl;
-		cout << "2. apokryptografhsh" << endl;
-		cout << "3. eksodos" << endl;
+		cout << "1. Encrypt" << endl;
+		cout << "2. Decrypt" << endl;
+		cout << "3. Exit" << endl;
 		int epilogh;
 		cin >> epilogh;
 		if (epilogh == 1) {

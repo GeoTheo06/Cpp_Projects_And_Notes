@@ -19,8 +19,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klhronomiktotha", "klhronom
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kryptografhsh", "kryptografhsh\kryptografhsh.vcxproj", "{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{E11092C8-07B6-4AA0-99FA-EF35697519AB}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "passGen", "passGen\passGen.vcxproj", "{1F8B5211-9011-4CDA-8F10-EFDFD7D73976}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polumorfismos", "polumorfismos\polumorfismos.vcxproj", "{B8F4F4C3-4503-4307-A374-02ADFF00CF28}"
@@ -51,7 +49,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArxeiaAskhsh", "ArxeiaAskhs
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fidaki", "Diagwnisma\Diagwnisma.vcxproj", "{2F30C82B-8F91-4BDE-8620-425024ECA89D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Keylogger", "Keylogger\Keylogger.vcxproj", "{617D300D-ED33-482C-8B9F-01D21683A1E5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Keylogger (Unfinished)", "Keylogger\Keylogger.vcxproj", "{617D300D-ED33-482C-8B9F-01D21683A1E5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Text Based Game", "Text Based Game\Text Based Game.vcxproj", "{0BBA51E4-1EC7-4C18-85F8-C6502FF408AD}"
 EndProject
@@ -127,14 +125,6 @@ Global
 		{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}.Release|x64.Build.0 = Release|x64
 		{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}.Release|x86.ActiveCfg = Release|Win32
 		{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}.Release|x86.Build.0 = Release|Win32
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Debug|x64.ActiveCfg = Debug|x64
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Debug|x64.Build.0 = Debug|x64
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Debug|x86.ActiveCfg = Debug|Win32
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Debug|x86.Build.0 = Debug|Win32
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Release|x64.ActiveCfg = Release|x64
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Release|x64.Build.0 = Release|x64
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Release|x86.ActiveCfg = Release|Win32
-		{E11092C8-07B6-4AA0-99FA-EF35697519AB}.Release|x86.Build.0 = Release|Win32
 		{1F8B5211-9011-4CDA-8F10-EFDFD7D73976}.Debug|x64.ActiveCfg = Debug|x64
 		{1F8B5211-9011-4CDA-8F10-EFDFD7D73976}.Debug|x64.Build.0 = Debug|x64
 		{1F8B5211-9011-4CDA-8F10-EFDFD7D73976}.Debug|x86.ActiveCfg = Debug|Win32
