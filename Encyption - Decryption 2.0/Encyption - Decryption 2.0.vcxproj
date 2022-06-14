@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2b755d4f-dc05-4a1e-8c4b-58f9ff62a51b}</ProjectGuid>
-    <RootNamespace>kryptografhsh</RootNamespace>
+    <ProjectGuid>{42bb9f0a-3f63-4987-9ce5-a064f3d86b2b}</ProjectGuid>
+    <RootNamespace>Encyption___Decryption_2_0</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Encryption -Decryption</ProjectName>
+    <ProjectName>Encyption - Decryption 2.0</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Encryption -Decryption.cpp" />
+    <ClCompile Include="Encyption - Decryption 2.0.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
