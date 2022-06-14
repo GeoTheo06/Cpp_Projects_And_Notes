@@ -17,7 +17,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "constructors", "constructor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "klhronomiktotha", "klhronomiktotha\klhronomiktotha.vcxproj", "{476EB642-8E8C-4834-A40F-5B9D91A5501B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kryptografhsh", "kryptografhsh\kryptografhsh.vcxproj", "{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Encryption -Decryption", "kryptografhsh\kryptografhsh.vcxproj", "{2B755D4F-DC05-4A1E-8C4B-58F9FF62A51B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "passGen", "passGen\passGen.vcxproj", "{1F8B5211-9011-4CDA-8F10-EFDFD7D73976}"
 EndProject
@@ -52,6 +52,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Keylogger (Unfinished)", "Keylogger\Keylogger.vcxproj", "{617D300D-ED33-482C-8B9F-01D21683A1E5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Text Based Game", "Text Based Game\Text Based Game.vcxproj", "{0BBA51E4-1EC7-4C18-85F8-C6502FF408AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Encyption - Decryption 2.0", "Encyption - Decryption 2.0\Encyption - Decryption 2.0.vcxproj", "{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PassGen 2.0", "PassGen 2.0\PassGen 2.0.vcxproj", "{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -261,6 +265,22 @@ Global
 		{0BBA51E4-1EC7-4C18-85F8-C6502FF408AD}.Release|x64.Build.0 = Release|x64
 		{0BBA51E4-1EC7-4C18-85F8-C6502FF408AD}.Release|x86.ActiveCfg = Release|Win32
 		{0BBA51E4-1EC7-4C18-85F8-C6502FF408AD}.Release|x86.Build.0 = Release|Win32
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Debug|x64.ActiveCfg = Debug|x64
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Debug|x64.Build.0 = Debug|x64
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Debug|x86.ActiveCfg = Debug|Win32
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Debug|x86.Build.0 = Debug|Win32
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Release|x64.ActiveCfg = Release|x64
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Release|x64.Build.0 = Release|x64
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Release|x86.ActiveCfg = Release|Win32
+		{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}.Release|x86.Build.0 = Release|Win32
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Debug|x64.ActiveCfg = Debug|x64
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Debug|x64.Build.0 = Debug|x64
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Debug|x86.ActiveCfg = Debug|Win32
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Debug|x86.Build.0 = Debug|Win32
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x64.ActiveCfg = Release|x64
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x64.Build.0 = Release|x64
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x86.ActiveCfg = Release|Win32
+		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,10 +3,10 @@ using namespace std;
 
 int main() {
 	while (5 > 4) {
-		string vowels[10] = { "A", "E", "I", "O", "U", "a", "e", "i", "o", "u" };
-		string consonants[38] = { "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V","X", "Z", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z" };
-		string specials[5] = { "!", "@", "#", "?", "&" };
-		string numbers[10] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		string vowels[10] = {"A", "E", "I", "O", "U", "a", "e", "i", "o", "u"};
+		string consonants[38] = {"B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V","X", "Z", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z"};
+		string specials[5] = {"!", "@", "#", "?", "&"};
+		string numbers[10] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
 		int megethosKodikou;
 		cout << "epelekse megethos kwdikou (minimum 2):";
