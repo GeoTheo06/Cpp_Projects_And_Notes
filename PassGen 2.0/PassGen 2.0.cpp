@@ -4,16 +4,16 @@ using namespace std;
 
 int passwordSize;
 
-string vowelsLowercase[5] = {"a", "e", "i", "o", "u"};
-string vowelsUppercase[5] = {"A", "E", "I", "O", "U",};
+string vowelsLowercase[5] = { "a", "e", "i", "o", "u" };
+string vowelsUppercase[5] = { "A", "E", "I", "O", "U", };
 
-string consonantsLowercase[19] = {"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z"};
-string consonantsUppercase[19] = {"B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V","X", "Z"};
+string consonantsLowercase[19] = { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z" };
+string consonantsUppercase[19] = { "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V","X", "Z" };
 
-string easySpecials[5] = {"!", "@", "#", "?", "&"};
-string allSpecials[32] = {"!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "[", "]", "{", "}", "\\", "|", "`", "~", "/", "?", ".", ",", "'", "\"", ";", ":", ">", "<"};
+string easySpecials[5] = { "!", "@", "#", "?", "&" };
+string allSpecials[32] = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "[", "]", "{", "}", "\\", "|", "`", "~", "/", "?", ".", ",", "'", "\"", ";", ":", ">", "<" };
 
-string numbers[10] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+string numbers[10] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 void easyToRememberPasswordsGenerator() {
 	srand(time(0)); //true random number generation
@@ -22,7 +22,7 @@ void easyToRememberPasswordsGenerator() {
 
 	int passwordLengthFilled = 0;
 
-	while (passwordLengthFilled != passwordSize - 2) //cheacking if we already have the length of the numbers we want
+	while (passwordLengthFilled != passwordSize - 2) //checking if we already have the length of the numbers we want
 	{
 		password += consonantsLowercase[rand() % 19];
 		passwordLengthFilled++;
@@ -64,25 +64,30 @@ void randomPasswordGenerator() {
 			if (randomPicker_VowelUpper) {
 				password += vowelsUppercase[rand() % 5]; // in this case uppercase
 
-			} else {
+			}
+			else {
 				password += vowelsLowercase[rand() % 5]; //in this case lowercase
 			}
 			passwordLengthFilled++;
 
-		} else if (chooseRandomCharacter == 2) {
+		}
+		else if (chooseRandomCharacter == 2) {
 			bool randomPicker_consonantsUpper = rand() % 2;
 			if (randomPicker_consonantsUpper) {
 				password += consonantsUppercase[rand() % 19];
 
-			} else {
+			}
+			else {
 				password += consonantsLowercase[rand() % 19];
 			}
 			passwordLengthFilled++;
 
-		} else if (chooseRandomCharacter == 3) {
+		}
+		else if (chooseRandomCharacter == 3) {
 			password += allSpecials[rand() % 32];
 			passwordLengthFilled++;
-		} else if (chooseRandomCharacter == 4) {
+		}
+		else if (chooseRandomCharacter == 4) {
 			password += numbers[rand() % 10];
 			passwordLengthFilled++;
 		}
@@ -127,7 +132,8 @@ int main() {
 
 				easyToRememberPasswordsGenerator();
 
-			} else if (typeOfPasswordChoice == 2) {
+			}
+			else if (typeOfPasswordChoice == 2) {
 
 				randomPasswordGenerator();
 
