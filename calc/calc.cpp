@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	cout << endl << "Symbola: + - * / ^" << endl << "an thes riza grapse \"!1\" meta ton arithmo" << endl;
+	cout << endl << "Symbola: + - * / ^" << endl;
 	while (5 > 4) {
 
 		double number1 = 0;
@@ -12,22 +12,24 @@ int main() {
 
 		cin >> number1 >> symbol >> number2;
 
-		if (symbol == '!') {
-			cout << "= " << sqrt(number1) << endl << endl;
-		} else {
-			if (symbol == '+') {
-				apotelesma = number1 + number2;
-			} else if (symbol == '-') {
-				apotelesma = number1 - number2;
-			} else if (symbol == '*') {
-				apotelesma = number1 * number2;
-			} else if (symbol == '/') {
-				apotelesma = number1 / number2;
-			} else if (symbol == '^') {
-				apotelesma = pow(number1, number2);
-			}
+		int number1Int = number1;
+		int number2Int = number2;
 
-			cout << "= " << apotelesma << endl << endl;
+		if (symbol == '^') {
+			apotelesma = number1Int ^ number2Int;
+		} else if (symbol == '+') {
+			apotelesma = number1 + number2;
+		} else if (symbol == '-') {
+			apotelesma = number1 - number2;
+		} else if (symbol == '*') {
+			apotelesma = number1 * number2;
+		} else if (symbol == '/') {
+			apotelesma = number1 / number2;
+		} else if (symbol == '^') {
+			apotelesma = pow(number1, number2);
 		}
+
+		cout << "= " << apotelesma << endl << endl;
+
 	}
 }
