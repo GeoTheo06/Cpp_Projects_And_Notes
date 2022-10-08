@@ -19,7 +19,7 @@ void Setup() {
 	gameOver = false;
 	dir = STOP;
 
-	x = width / 2; // to kanw dia 2 gia na topothetithei sto kentro
+	x = width / 2; // The devision of the pixel height, width by 2 indicates the center of the screen
 	y = height / 2;
 
 	fruitX = rand() % width;
@@ -41,9 +41,11 @@ void Draw() {
 			cout << endl;
 			if (i == y && j == x) {
 				cout << "O";
-			} else if (i == fruitY && j == fruitX) {
+			}
+			else if (i == fruitY && j == fruitX) {
 				cout << "F";
-			} else {
+			}
+			else {
 				bool print = false;
 				for (int k = 0; k < nTail; k++) {
 					if (tailX[k] == j && tailY[k] == i) {
@@ -71,19 +73,19 @@ void Draw() {
 void Input() {
 	if (_kbhit()) {
 		switch (_getch()) {
-		case 'a':
+			case 'a':
 			dir = LEFT;
 			break;
-		case 'd':
+			case 'd':
 			dir = RIGHT;
 			break;
-		case 'w':
+			case 'w':
 			dir = UP;
 			break;
-		case 's':
+			case 's':
 			dir = DOWN;
 			break;
-		case 'x':
+			case 'x':
 			gameOver = true;
 			break;
 		}
@@ -106,27 +108,29 @@ void Logic() {
 		prevY = prev2Y;
 	}
 	switch (dir) {
-	case LEFT:
+		case LEFT:
 		x--;
 		break;
-	case RIGHT:
+		case RIGHT:
 		x++;
 		break;
-	case UP:
+		case UP:
 		y--;
 		break;
-	case DOWN:
+		case DOWN:
 		y++;
 		break;
 	}
 	if (x >= width) {
 		x = 0;
-	} else if (x < 0) {
+	}
+	else if (x < 0) {
 		x = width - 1;
 	}
 	if (y >= height) {
 		y = 0;
-	} else if (y < 0) {
+	}
+	else if (y < 0) {
 		y = height - 1;
 	}
 	for (int i = 0; i < nTail; i++) {
