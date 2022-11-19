@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "calc", "calc\calc.vcxproj", "{DE2DA7D1-C8BC-44F9-9037-77CC5CD8C2AB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "advanced_calc", "calc\calc.vcxproj", "{DE2DA7D1-C8BC-44F9-9037-77CC5CD8C2AB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "b fash", "b fash\b fash.vcxproj", "{2286F50D-F984-4AC4-8B17-807A66659BE3}"
 EndProject
@@ -56,6 +56,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Encyption - Decryption 2.0", "Encyption - Decryption 2.0\Encyption - Decryption 2.0.vcxproj", "{42BB9F0A-3F63-4987-9CE5-A064F3D86B2B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PassGen 2.0", "PassGen 2.0\PassGen 2.0.vcxproj", "{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Diagwnismos 22 23 a fash", "Diagwnismos 22 23 a fash\Diagwnismos 22 23 a fash.vcxproj", "{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "Vectors\Vectors.vcxproj", "{2D5A07CD-1814-40C1-835D-66AE38E01822}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mathima", "mathima\mathima.vcxproj", "{387F2BD3-6350-419F-B30B-7659BCD54B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -281,6 +287,30 @@ Global
 		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x64.Build.0 = Release|x64
 		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x86.ActiveCfg = Release|Win32
 		{FD82A7E1-4435-408A-9F6D-C1A23A8CF241}.Release|x86.Build.0 = Release|Win32
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Debug|x64.ActiveCfg = Debug|x64
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Debug|x64.Build.0 = Debug|x64
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Debug|x86.ActiveCfg = Debug|Win32
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Debug|x86.Build.0 = Debug|Win32
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Release|x64.ActiveCfg = Release|x64
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Release|x64.Build.0 = Release|x64
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Release|x86.ActiveCfg = Release|Win32
+		{E50E9B9F-38D1-4517-A9EB-0B68D635A9D1}.Release|x86.Build.0 = Release|Win32
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Debug|x64.ActiveCfg = Debug|x64
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Debug|x64.Build.0 = Debug|x64
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Debug|x86.ActiveCfg = Debug|Win32
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Debug|x86.Build.0 = Debug|Win32
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Release|x64.ActiveCfg = Release|x64
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Release|x64.Build.0 = Release|x64
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Release|x86.ActiveCfg = Release|Win32
+		{2D5A07CD-1814-40C1-835D-66AE38E01822}.Release|x86.Build.0 = Release|Win32
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Debug|x64.ActiveCfg = Debug|x64
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Debug|x64.Build.0 = Debug|x64
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Debug|x86.ActiveCfg = Debug|Win32
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Debug|x86.Build.0 = Debug|Win32
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Release|x64.ActiveCfg = Release|x64
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Release|x64.Build.0 = Release|x64
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Release|x86.ActiveCfg = Release|Win32
+		{387F2BD3-6350-419F-B30B-7659BCD54B6A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
