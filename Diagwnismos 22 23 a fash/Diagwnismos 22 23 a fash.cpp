@@ -8,7 +8,8 @@ int main()
 	ifstream in("coupon.in");
 	ofstream out("coupon.out");
 	int n = 0, b = 0, sum = 0;
-	float a = 0, x1 = 0;
+	float a = 0, sum_x1 = 0;
+	float* x1 = new float[n];
 	/*
 	n = poses oikonomikes omades (6)
 	a = poso to opoio katevazei to poso pou tha parei h kathe oikonomikh omada (0.5)
@@ -30,18 +31,22 @@ int main()
 	for (int i = 0; i < n; i++) {
 		if (i == 0) {
 			if (c[i] >= 10) {
-				x1 += c[i];
+				x1[i] = c[i];
 			}
 		} else {
 			if (c[i] * pow(a, i) >= 10)
-				x1 += c[i] * pow(a, i);
+				x1[i] = c[i] * pow(a, i);
 		}
 	}
-	x1 = b / x1;
-	x[0] = x1;
 	for (int i = 0; i < n; i++) {
-		if (x1 * pow(a, i) >= 10) {
-			x[i] = x1 * pow(a, i);
+		sum_x1 += x1[i];
+	}
+
+	sum_x1 = b / sum_x1;
+	x[0] = sum_x1;
+	for (int i = 0; i < n; i++) {
+		if (sum_x1 * pow(a, i) >= 10) {
+			x[i] = sum_x1 * pow(a, i);
 		} else {
 			x[i] = 0;
 		}
