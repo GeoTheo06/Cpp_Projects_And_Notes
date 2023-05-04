@@ -2,39 +2,51 @@
 #include <vector>
 using namespace std;
 
-int main() {
-    // Assign vector 
-    vector<int> vec;
+int main()
+{
+	// Declare and initialize vector
+	vector<int> vec;
 
-    // fill the array with 12 seven times 
-    vec.assign(7, 12);
+	// Fill the vector with 12, seven times
+	vec.assign(7, 12);
 
-    //print the elements of the vector
-    cout << "The vector elements are: ";
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i] << " ";
-    }
+	// Print the elements of the vector
+	cout << "The vector elements are: ";
+	for (int i = 0; i < vec.size(); i++)
+	{
+		cout << vec[i] << " ";
+	}
+	cout << endl;
 
-    // inserts 24 to the last position which is vec.size() - 1
-    vec.push_back(24);
-    cout << "The last element is: " << vec[vec.size() - 1];
+	// Insert 24 at the end
+	vec.push_back(24);
+	cout << "The last element is: " << vec.back() << endl;
 
-    // removes last element 
-    vec.pop_back();
+	// Remove the last element
+	vec.pop_back();
 
-    // inserts 10 at the beginning 
-    vec.insert(vec.end(), 10, 3);
+	// Insert 10 at the end 3 times
+	vec.insert(vec.end(), 3, 10);
 
-    vec.insert(vec.begin() + 2, 10);
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i] << " ";
-    }
+	// Insert 10 at the beginning
+	vec.insert(vec.begin(), 10);
 
-    //removes first element
-    vec.erase(vec.begin());
-    //removes the whole array
-    vec.erase(vec.begin(), vec.end());
-    for (int i = 0; i < vec.size(); i++) {
-        vec.erase(vec.begin() + i);
-    }
+	// Print the elements of the vector
+	cout << "The vector elements are: ";
+	for (int i = 0; i < vec.size(); i++)
+	{
+		cout << vec[i] << " ";
+	}
+	cout << endl;
+
+	// Remove the first element
+	vec.erase(vec.begin());
+
+	// Remove the entire vector
+	vec.clear();
+
+	// Print the elements of the vector
+	cout << "The vector is empty." << endl;
+
+	return 0;
 }
