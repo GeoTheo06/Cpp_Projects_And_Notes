@@ -11,11 +11,10 @@ The projects included in this repository are a mix of educational, experimental,
 - File handling and manipulation
 - Simple games and interactive programs
 - Explorations of language features and concepts
+- Data Structures and Algorithms
 
 Please explore the project directories for more details on each individual project.
 
 ## Usage and Documentation
 
-To use any of the projects in this repository, navigate to the respective project directory and follow the instructions provided in the README file. There are no executable files (only cpp) as none of the projects in this repository are made for productions they represent personal notes for me to go back and revise. Some projects that are actually complete, have their own repository where there is documentation, explanation and executable files.
-
-Thank you for visiting my C++ Projects Repository!
+To use any of the projects in this repository, navigate to the respective project directory. There are no executable files (only cpp) as none of the projects in this repository are made for production. They represent personal notes and exercises for me and anyone learning c++ to go back and revise. Some projects that are actually complete, have their own repository where there is documentation, explanation and executable files for anyone to run and experiment.
